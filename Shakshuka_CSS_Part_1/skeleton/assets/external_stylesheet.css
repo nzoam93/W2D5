@@ -1,0 +1,92 @@
+/*let's do some styling*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    font-size: 38px;
+}
+
+h2{
+    font-size: 32px;
+}
+
+.ingredients-list{ /*refers to the class I made in the HTML file */
+    list-style: square inside;
+}
+
+ul {
+    list-style: circle inside;
+}
+
+header > img {
+    width: 100px;
+}
+
+ul > li > a{ /* the ">" allows you to get more and more specific within the HTML doc tree*/
+    text-decoration: none;
+    color: inherit
+}
+
+*{
+    background-color: lavender;
+}
+
+input[type="radio"]{
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none; /*this is for the stars portion*/
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    background-image: url(./stars.png);
+}
+
+input[type="radio"]:checked{
+    background-position:bottom;
+    color: yellow;
+}
+
+input[type="radio"]:hover{
+    background-position:center;
+    color: blue; /*in this case, defined by the position of the background color*/
+}
+
+
+input[type="submit"]{
+    cursor: pointer;
+    outline: none;
+}
+
+select{
+    cursor: pointer;
+    outline: none;
+}
+
+form input:last-child{
+    background-color: gold;
+}
+
+form input:last-child:hover{
+    -webkit-filter: brightness(90%);
+}
+
+#review:focus{
+    background-color: blue; /*just for fun!*/
+}
+
+#review:active{
+    background-color: greenyellow; /*just for fun!*/
+}
+
+ol li:nth-of-type(2n) { /*ol -> li. li just in front of :nth*/
+    background-color: whitesmoke;
+}
+
+/*for the "+", you need to be immediately after the first criteria*/
+/*the review is just after the h2 element as shown in "inspect" in Chrome dev tools*/
+h2 + .user_review{
+    border-top: 1px;
+    border-style: solid;
+    border-color: black;
+}
